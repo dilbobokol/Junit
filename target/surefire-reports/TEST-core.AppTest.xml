@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="10" failures="4" name="core.AppTest" time="0.116" errors="0" skipped="2">
+<testsuite tests="10" failures="4" name="core.AppTest" time="0.026" errors="0" skipped="2">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Java\jdk1.8.0_25\jre\bin"/>
@@ -28,7 +28,7 @@
     <property name="os.name" value="Windows 7"/>
     <property name="classworlds.conf" value="C:\Maven\apache-maven-3.2.5-bin\apache-maven-3.2.5\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Java\jdk1.8.0_25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;%SystemRoot%\system32\WindowsPowerShell\v1.0\;C:\Maven\apache-maven-3.2.5-bin\apache-maven-3.2.5\bin;C:\Java\jdk1.8.0_25\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\GIT\Git\bin\;."/>
+    <property name="java.library.path" value="C:\Java\jdk1.8.0_25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Maven\apache-maven-3.2.5-bin\apache-maven-3.2.5\bin;C:\Java\jdk1.8.0_25\bin;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\GIT\Git\bin\;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -43,7 +43,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Java\jdk1.8.0_25\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher site install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -62,12 +62,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="core.AppTest" name="Test_05_assertSame_Negative" time="0.049">
-    <failure message="Error expected same:&lt;12&gt; was not:&lt;13&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Error expected same:&lt;12&gt; was not:&lt;13&gt;
+  <testcase classname="core.AppTest" name="Test_05_assertSame_Negative" time="0.008">
+    <failure message="Integer not the same. expected same:&lt;54&gt; was not:&lt;55&gt;" type="java.lang.AssertionError">java.lang.AssertionError: Integer not the same. expected same:&lt;54&gt; was not:&lt;55&gt;
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.failNotSame(Assert.java:828)
 	at org.junit.Assert.assertSame(Assert.java:771)
-	at core.AppTest.Test_05_assertSame_Negative(AppTest.java:61)
+	at core.AppTest.Test_05_assertSame_Negative(AppTest.java:66)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -102,22 +102,17 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>BeforeClass: Code executed once before first Test Method
-Before: Code executed before each Test Method
-Test_05_assertEquals_Negative
-After: Code executed after each Test Method
-</system-out>
   </testcase>
-  <testcase classname="core.AppTest" name="Test_07_assertFalse_Positive" time="0.004"/>
-  <testcase classname="core.AppTest" name="Test_09_assertTrue_Positive" time="0.008"/>
-  <testcase classname="core.AppTest" name="Test_03_assertEquals_Ignored" time="0.008">
+  <testcase classname="core.AppTest" name="Test_07_assertFalse_Positive" time="0"/>
+  <testcase classname="core.AppTest" name="Test_09_assertTrue_Positive" time="0"/>
+  <testcase classname="core.AppTest" name="Test_03_assertEquals_Ignored" time="0">
     <skipped/>
   </testcase>
-  <testcase classname="core.AppTest" name="Test_10_assertTrue_Negative" time="0.006">
-    <failure message="Failure should be true" type="java.lang.AssertionError">java.lang.AssertionError: Failure should be true
+  <testcase classname="core.AppTest" name="Test_10_assertTrue_Negative" time="0.009">
+    <failure message="Boolean should be true" type="java.lang.AssertionError">java.lang.AssertionError: Boolean should be true
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.assertTrue(Assert.java:41)
-	at core.AppTest.Test_10_assertTrue_Negative(AppTest.java:88)
+	at core.AppTest.Test_10_assertTrue_Negative(AppTest.java:98)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -152,21 +147,17 @@ After: Code executed after each Test Method
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>Before: Code executed before each Test Method
-Test_10_assertTrue_Negative
-After: Code executed after each Test Method
-</system-out>
   </testcase>
-  <testcase classname="core.AppTest" name="Test_06_assertSame_Ignored" time="0.006">
+  <testcase classname="core.AppTest" name="Test_06_assertSame_Ignored" time="0.009">
     <skipped/>
   </testcase>
-  <testcase classname="core.AppTest" name="Test_01_assertEquals_Positive" time="0.018"/>
-  <testcase classname="core.AppTest" name="Test_08_assertFalse_Negative" time="0.002">
-    <failure message="Failure should be false" type="java.lang.AssertionError">java.lang.AssertionError: Failure should be false
+  <testcase classname="core.AppTest" name="Test_01_assertEquals_Positive" time="0"/>
+  <testcase classname="core.AppTest" name="Test_08_assertFalse_Negative" time="0">
+    <failure message="Boolean should be false" type="java.lang.AssertionError">java.lang.AssertionError: Boolean should be false
 	at org.junit.Assert.fail(Assert.java:88)
 	at org.junit.Assert.assertTrue(Assert.java:41)
 	at org.junit.Assert.assertFalse(Assert.java:64)
-	at core.AppTest.Test_08_assertFalse_Negative(AppTest.java:78)
+	at core.AppTest.Test_08_assertFalse_Negative(AppTest.java:86)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -201,15 +192,11 @@ After: Code executed after each Test Method
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>Before: Code executed before each Test Method
-Test_08_assertFalse_Negative
-After: Code executed after each Test Method
-</system-out>
   </testcase>
-  <testcase classname="core.AppTest" name="Test_02_assertEquals_Negative" time="0.007">
-    <failure message="Error expected:&lt;Dil[ya]&gt; but was:&lt;Dil[i]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: Error expected:&lt;Dil[ya]&gt; but was:&lt;Dil[i]&gt;
+  <testcase classname="core.AppTest" name="Test_02_assertEquals_Negative" time="0">
+    <failure message="String not the same. expected:&lt;Testing [TestNG 6]&gt; but was:&lt;Testing [JUnit 4]&gt;" type="org.junit.ComparisonFailure">org.junit.ComparisonFailure: String not the same. expected:&lt;Testing [TestNG 6]&gt; but was:&lt;Testing [JUnit 4]&gt;
 	at org.junit.Assert.assertEquals(Assert.java:115)
-	at core.AppTest.Test_02_assertEquals_Negative(AppTest.java:43)
+	at core.AppTest.Test_02_assertEquals_Negative(AppTest.java:45)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -244,10 +231,6 @@ After: Code executed after each Test Method
 	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
 </failure>
-    <system-out>Before: Code executed before each Test Method
-Test_02_assertEquals_Negative
-After: Code executed after each Test Method
-</system-out>
   </testcase>
-  <testcase classname="core.AppTest" name="Test_04_assertSame_Positive" time="0.008"/>
+  <testcase classname="core.AppTest" name="Test_04_assertSame_Positive" time="0"/>
 </testsuite>
